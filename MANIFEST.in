@@ -1,0 +1,2 @@
+include MANIFEST.in
+recursive-include print_pro *.json *.js *.css *.html *.png *.jpg *.svg *.ico *.txt *.md

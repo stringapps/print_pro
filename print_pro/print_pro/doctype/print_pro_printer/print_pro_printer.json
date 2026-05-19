@@ -1,0 +1,260 @@
+{
+ "actions": [],
+ "autoname": "field:printer_name",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "printer_name",
+  "printer_type",
+  "is_default",
+  "enabled",
+  "col_break_1",
+  "paper_size",
+  "orientation",
+  "copies",
+  "section_break_network",
+  "printer_ip",
+  "printer_port",
+  "col_break_2",
+  "usb_vendor_id",
+  "usb_product_id",
+  "section_break_pdf",
+  "pdf_save_path",
+  "pdf_filename_format",
+  "section_break_email",
+  "email_on_print",
+  "email_recipients",
+  "section_break_advanced",
+  "custom_css",
+  "margins_section",
+  "margin_top",
+  "margin_right",
+  "col_break_margin",
+  "margin_bottom",
+  "margin_left",
+  "section_break_doctypes",
+  "applicable_doctypes"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "printer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Printer Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "printer_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Printer Type",
+   "options": "PDF\nNetwork (IP)\nUSB\nCloud Print\nEmail",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Set as Default"
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "A4",
+   "fieldname": "paper_size",
+   "fieldtype": "Select",
+   "label": "Paper Size",
+   "options": "A4\nA5\nA3\nLetter\nLegal\nThermal 80mm\nThermal 58mm\nCustom"
+  },
+  {
+   "default": "Portrait",
+   "fieldname": "orientation",
+   "fieldtype": "Select",
+   "label": "Orientation",
+   "options": "Portrait\nLandscape"
+  },
+  {
+   "default": "1",
+   "fieldname": "copies",
+   "fieldtype": "Int",
+   "label": "Default Copies"
+  },
+  {
+   "fieldname": "section_break_network",
+   "fieldtype": "Section Break",
+   "label": "Network / USB Settings",
+   "depends_on": "eval:['Network (IP)', 'USB'].includes(doc.printer_type)"
+  },
+  {
+   "depends_on": "eval:doc.printer_type === 'Network (IP)'",
+   "fieldname": "printer_ip",
+   "fieldtype": "Data",
+   "label": "Printer IP Address"
+  },
+  {
+   "depends_on": "eval:doc.printer_type === 'Network (IP)'",
+   "default": "9100",
+   "fieldname": "printer_port",
+   "fieldtype": "Data",
+   "label": "Printer Port"
+  },
+  {
+   "fieldname": "col_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.printer_type === 'USB'",
+   "fieldname": "usb_vendor_id",
+   "fieldtype": "Data",
+   "label": "USB Vendor ID"
+  },
+  {
+   "depends_on": "eval:doc.printer_type === 'USB'",
+   "fieldname": "usb_product_id",
+   "fieldtype": "Data",
+   "label": "USB Product ID"
+  },
+  {
+   "depends_on": "eval:doc.printer_type === 'PDF'",
+   "fieldname": "section_break_pdf",
+   "fieldtype": "Section Break",
+   "label": "PDF Options"
+  },
+  {
+   "depends_on": "eval:doc.printer_type === 'PDF'",
+   "fieldname": "pdf_save_path",
+   "fieldtype": "Data",
+   "label": "PDF Save Path (leave empty for download)"
+  },
+  {
+   "depends_on": "eval:doc.printer_type === 'PDF'",
+   "default": "{doctype}-{name}",
+   "fieldname": "pdf_filename_format",
+   "fieldtype": "Data",
+   "label": "PDF Filename Format"
+  },
+  {
+   "depends_on": "eval:doc.printer_type === 'Email'",
+   "fieldname": "section_break_email",
+   "fieldtype": "Section Break",
+   "label": "Email Printer Settings"
+  },
+  {
+   "depends_on": "eval:doc.printer_type === 'Email'",
+   "default": "0",
+   "fieldname": "email_on_print",
+   "fieldtype": "Check",
+   "label": "Send Email on Print"
+  },
+  {
+   "depends_on": "eval:doc.email_on_print",
+   "fieldname": "email_recipients",
+   "fieldtype": "Small Text",
+   "label": "Email Recipients (comma separated)"
+  },
+  {
+   "fieldname": "section_break_advanced",
+   "fieldtype": "Section Break",
+   "label": "Advanced"
+  },
+  {
+   "fieldname": "custom_css",
+   "fieldtype": "Code",
+   "label": "Custom CSS for this Printer",
+   "options": "CSS"
+  },
+  {
+   "fieldname": "margins_section",
+   "fieldtype": "Section Break",
+   "label": "Page Margins (mm)"
+  },
+  {
+   "default": "10",
+   "fieldname": "margin_top",
+   "fieldtype": "Float",
+   "label": "Top"
+  },
+  {
+   "default": "10",
+   "fieldname": "margin_right",
+   "fieldtype": "Float",
+   "label": "Right"
+  },
+  {
+   "fieldname": "col_break_margin",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "10",
+   "fieldname": "margin_bottom",
+   "fieldtype": "Float",
+   "label": "Bottom"
+  },
+  {
+   "default": "10",
+   "fieldname": "margin_left",
+   "fieldtype": "Float",
+   "label": "Left"
+  },
+  {
+   "fieldname": "section_break_doctypes",
+   "fieldtype": "Section Break",
+   "label": "Applicable DocTypes"
+  },
+  {
+   "fieldname": "applicable_doctypes",
+   "fieldtype": "Table",
+   "label": "Applicable DocTypes",
+   "options": "Print Pro Printer Doctype"
+  }
+ ],
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Print Pro",
+ "name": "Print Pro Printer",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 0,
+   "write": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

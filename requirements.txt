@@ -1,0 +1,3 @@
+# frappe and erpnext are already present in the bench environment.
+# Do NOT add them here — uv cannot resolve their git-URL sub-dependencies
+# (e.g. pypika). Declare them only in hooks.py → required_apps instead.

@@ -1,0 +1,151 @@
+{
+ "actions": [],
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "System",
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "show_print_pro_button",
+  "replace_default_print",
+  "col_break_1",
+  "default_paper_size",
+  "default_orientation",
+  "print_log_retention_days",
+  "section_break_printer",
+  "default_printer",
+  "section_break_advanced",
+  "allow_custom_css",
+  "show_print_preview",
+  "auto_print_on_submit",
+  "col_break_2",
+  "email_print_as_attachment",
+  "watermark_on_draft",
+  "watermark_text"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enable Print Pro"
+  },
+  {
+   "default": "1",
+   "fieldname": "show_print_pro_button",
+   "fieldtype": "Check",
+   "label": "Show Print Pro Button on all Documents"
+  },
+  {
+   "default": "0",
+   "fieldname": "replace_default_print",
+   "fieldtype": "Check",
+   "label": "Replace ERPNext Default Print Button with Print Pro"
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "A4",
+   "fieldname": "default_paper_size",
+   "fieldtype": "Select",
+   "label": "Default Paper Size",
+   "options": "A4\nA5\nA3\nLetter\nLegal\nThermal 80mm\nThermal 58mm\nCustom"
+  },
+  {
+   "default": "Portrait",
+   "fieldname": "default_orientation",
+   "fieldtype": "Select",
+   "label": "Default Orientation",
+   "options": "Portrait\nLandscape"
+  },
+  {
+   "default": "30",
+   "fieldname": "print_log_retention_days",
+   "fieldtype": "Int",
+   "label": "Print Log Retention (Days)"
+  },
+  {
+   "fieldname": "section_break_printer",
+   "fieldtype": "Section Break",
+   "label": "Default Printer"
+  },
+  {
+   "fieldname": "default_printer",
+   "fieldtype": "Link",
+   "label": "Default Printer",
+   "options": "Print Pro Printer"
+  },
+  {
+   "fieldname": "section_break_advanced",
+   "fieldtype": "Section Break",
+   "label": "Advanced Options"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_custom_css",
+   "fieldtype": "Check",
+   "label": "Allow Custom CSS in Print Formats"
+  },
+  {
+   "default": "1",
+   "fieldname": "show_print_preview",
+   "fieldtype": "Check",
+   "label": "Show Print Preview before Printing"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_print_on_submit",
+   "fieldtype": "Check",
+   "label": "Auto Print on Document Submit"
+  },
+  {
+   "fieldname": "col_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "email_print_as_attachment",
+   "fieldtype": "Check",
+   "label": "Attach PDF when Emailing"
+  },
+  {
+   "default": "1",
+   "fieldname": "watermark_on_draft",
+   "fieldtype": "Check",
+   "label": "Show DRAFT Watermark on Unsaved Docs"
+  },
+  {
+   "depends_on": "watermark_on_draft",
+   "fieldname": "watermark_text",
+   "fieldtype": "Data",
+   "label": "Watermark Text",
+   "default": "DRAFT"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Print Pro",
+ "name": "Print Pro Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 0,
+   "read": 1,
+   "report": 0,
+   "role": "System Manager",
+   "share": 0,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,285 @@
+{
+ "actions": [],
+ "autoname": "field:format_name",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "format_name",
+  "document_type",
+  "is_default",
+  "enabled",
+  "col_break_1",
+  "paper_size",
+  "orientation",
+  "font_size",
+  "section_break_printer",
+  "assigned_printer",
+  "copies",
+  "col_break_printer",
+  "show_company_logo",
+  "show_company_address",
+  "show_letterhead",
+  "section_break_header_opts",
+  "with_header",
+  "repeat_header_on_pages",
+  "col_break_header_opts",
+  "dot_matrix_mode",
+  "section_break_template",
+  "use_erpnext_format",
+  "erpnext_print_format",
+  "col_break_template",
+  "use_custom_template",
+  "custom_html",
+  "section_break_css",
+  "custom_css",
+  "section_break_header",
+  "header_html",
+  "section_break_footer",
+  "footer_html",
+  "section_break_conditions",
+  "conditions_table"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "format_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Format Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Document Type",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Default for this DocType"
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "A4",
+   "fieldname": "paper_size",
+   "fieldtype": "Select",
+   "label": "Paper Size",
+   "options": "A4\nA5\nA3\nLetter\nLegal\nThermal 80mm\nThermal 58mm\nCustom"
+  },
+  {
+   "default": "Portrait",
+   "fieldname": "orientation",
+   "fieldtype": "Select",
+   "label": "Orientation",
+   "options": "Portrait\nLandscape"
+  },
+  {
+   "default": "12",
+   "fieldname": "font_size",
+   "fieldtype": "Int",
+   "label": "Font Size (px)"
+  },
+  {
+   "fieldname": "section_break_printer",
+   "fieldtype": "Section Break",
+   "label": "Printer & Output"
+  },
+  {
+   "fieldname": "assigned_printer",
+   "fieldtype": "Link",
+   "label": "Assigned Printer",
+   "options": "Print Pro Printer"
+  },
+  {
+   "default": "1",
+   "fieldname": "copies",
+   "fieldtype": "Int",
+   "label": "Number of Copies"
+  },
+  {
+   "fieldname": "col_break_printer",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "show_company_logo",
+   "fieldtype": "Check",
+   "label": "Show Company Logo"
+  },
+  {
+   "default": "1",
+   "fieldname": "show_company_address",
+   "fieldtype": "Check",
+   "label": "Show Company Address"
+  },
+  {
+   "default": "1",
+   "fieldname": "show_letterhead",
+   "fieldtype": "Check",
+   "label": "Show Letterhead"
+  },
+  {
+   "fieldname": "section_break_template",
+   "fieldtype": "Section Break",
+   "label": "Template Source"
+  },
+  {
+   "default": "1",
+   "fieldname": "use_erpnext_format",
+   "fieldtype": "Check",
+   "label": "Use ERPNext Print Format as Base"
+  },
+  {
+   "depends_on": "use_erpnext_format",
+   "fieldname": "erpnext_print_format",
+   "fieldtype": "Link",
+   "label": "ERPNext Print Format",
+   "options": "Print Format"
+  },
+  {
+   "fieldname": "col_break_template",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "use_custom_template",
+   "fieldtype": "Check",
+   "label": "Use Custom HTML Template"
+  },
+  {
+   "depends_on": "use_custom_template",
+   "fieldname": "custom_html",
+   "fieldtype": "Code",
+   "label": "Custom HTML Template",
+   "options": "HTML"
+  },
+  {
+   "fieldname": "section_break_css",
+   "fieldtype": "Section Break",
+   "label": "Custom Styling"
+  },
+  {
+   "fieldname": "custom_css",
+   "fieldtype": "Code",
+   "label": "Custom CSS",
+   "options": "CSS"
+  },
+  {
+   "fieldname": "section_break_header",
+   "fieldtype": "Section Break",
+   "label": "Custom Header"
+  },
+  {
+   "fieldname": "header_html",
+   "fieldtype": "Code",
+   "label": "Header HTML",
+   "options": "HTML"
+  },
+  {
+   "fieldname": "section_break_footer",
+   "fieldtype": "Section Break",
+   "label": "Custom Footer"
+  },
+  {
+   "fieldname": "footer_html",
+   "fieldtype": "Code",
+   "label": "Footer HTML",
+   "options": "HTML"
+  },
+  {
+   "fieldname": "section_break_conditions",
+   "fieldtype": "Section Break",
+   "label": "Conditional Printing Rules"
+  },
+  {
+   "fieldname": "conditions_table",
+   "fieldtype": "Table",
+   "label": "Print Conditions",
+   "options": "Print Pro Format Condition"
+  },
+  {
+   "fieldname": "section_break_header_opts",
+   "fieldtype": "Section Break",
+   "label": "Header & Page Options"
+  },
+  {
+   "default": "1",
+   "fieldname": "with_header",
+   "fieldtype": "Check",
+   "label": "Show Company Header",
+   "description": "Show company logo, name and document badge at the top of the print"
+  },
+  {
+   "default": "0",
+   "fieldname": "repeat_header_on_pages",
+   "fieldtype": "Check",
+   "label": "Repeat Header on Every Page",
+   "description": "When enabled, the company header repeats at the top of each printed page",
+   "depends_on": "eval:doc.with_header"
+  },
+  {
+   "fieldname": "col_break_header_opts",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "dot_matrix_mode",
+   "fieldtype": "Check",
+   "label": "Dot Matrix / Plain Mode",
+   "description": "Removes all background colors and gradients. Use for dot matrix / impact printers."
+  }
+ ],
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Print Pro",
+ "name": "Print Pro Format",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 0,
+   "write": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

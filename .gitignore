@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+*.pyc
+*.pyo
+
+# Node / Assets
+node_modules/
+*.min.js
+*.min.css
+.parcel-cache/
+
+# ERPNext / Frappe
+*.cfg
+*.log
+.frappe/
+frappe-bench/
+apps/
+env/
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+*.iml

@@ -1,0 +1,190 @@
+/* ========================================================
+   Print Pro - Professional UI Styles
+   Compatible with ERPNext v15 / Frappe v15
+   ======================================================== */
+
+/* ── Button ────────────────────────────────────────────── */
+.btn-print-pro {
+    background: linear-gradient(135deg, #1a73e8, #0d47a1);
+    color: #fff !important;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: box-shadow 0.2s, transform 0.1s;
+    box-shadow: 0 2px 6px rgba(26,115,232,0.3);
+}
+.btn-print-pro:hover {
+    box-shadow: 0 4px 12px rgba(26,115,232,0.45);
+    transform: translateY(-1px);
+}
+.btn-print-pro:active {
+    transform: translateY(0);
+}
+.btn-print-pro svg, .btn-print-pro .pp-icon {
+    width: 15px;
+    height: 15px;
+}
+
+/* ── Dialog ────────────────────────────────────────────── */
+.print-pro-dialog .modal-header {
+    background: linear-gradient(135deg, #1a73e8, #0d47a1);
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+    padding: 16px 20px;
+}
+.print-pro-dialog .modal-title {
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.print-pro-dialog .modal-body {
+    padding: 20px;
+    background: #fafbfc;
+}
+.print-pro-dialog .modal-footer {
+    background: #f5f6f8;
+    border-top: 1px solid #e0e4ea;
+    padding: 12px 20px;
+    border-radius: 0 0 8px 8px;
+}
+
+/* ── Print Options Grid ────────────────────────────────── */
+.pp-options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+.pp-option-group {
+    background: #fff;
+    border: 1px solid #e0e4ea;
+    border-radius: 8px;
+    padding: 14px;
+}
+.pp-option-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+.pp-option-group select,
+.pp-option-group input {
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.pp-option-group select:focus,
+.pp-option-group input:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 3px rgba(26,115,232,0.12);
+}
+
+/* ── Preview Panel ─────────────────────────────────────── */
+.pp-preview-panel {
+    background: #fff;
+    border: 1px solid #e0e4ea;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 300px;
+}
+.pp-preview-toolbar {
+    background: #f5f6f8;
+    border-bottom: 1px solid #e0e4ea;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #6c757d;
+}
+.pp-preview-frame {
+    width: 100%;
+    min-height: 400px;
+    border: none;
+}
+
+/* ── Print History ─────────────────────────────────────── */
+.pp-log-table {
+    width: 100%;
+    font-size: 12px;
+    border-collapse: collapse;
+}
+.pp-log-table th {
+    background: #f5f6f8;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 2px solid #e0e4ea;
+}
+.pp-log-table td {
+    padding: 7px 10px;
+    border-bottom: 1px solid #f0f2f4;
+    color: #343a40;
+}
+.pp-log-table tr:hover td {
+    background: #f8f9fa;
+}
+.pp-status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    gap: 4px;
+}
+.pp-status-badge.success { background: #d4edda; color: #155724; }
+.pp-status-badge.failed  { background: #f8d7da; color: #721c24; }
+.pp-status-badge.pending { background: #fff3cd; color: #856404; }
+
+/* ── Watermark ─────────────────────────────────────────── */
+@media print {
+    .pp-watermark {
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-35deg);
+        font-size: 80px;
+        font-weight: 900;
+        color: rgba(200, 0, 0, 0.12);
+        pointer-events: none;
+        z-index: 9999;
+        letter-spacing: 8px;
+        white-space: nowrap;
+    }
+}
+
+/* ── Shortcut badge ────────────────────────────────────── */
+.pp-shortcut-badge {
+    display: inline-block;
+    background: #e8f0fe;
+    color: #1a73e8;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 1px 5px;
+    margin-left: 4px;
+    vertical-align: middle;
+    letter-spacing: 0.3px;
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 600px) {
+    .pp-options-grid { grid-template-columns: 1fr; }
+}
